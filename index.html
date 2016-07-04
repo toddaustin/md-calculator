@@ -1,17 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Calculator</title>
     <link rel="stylesheet" type="text/css" href="css/calculator.css">
 </head>
+
 <body>
     <nav>
         <ul>
-            <li><a href="https://toddaustin.github.io/md-multi-page-website">Home</a></li><li><a href="https://toddaustin.github.io/md-buttons">Buttons</a></li><li><a href="https://toddaustin.github.io/md-profile-sidebar">Profile Sidebar</a></li><li><a href="https://toddaustin.github.io/md-forms">Forms & Inputs</a></li><li><a href="https://toddaustin.github.io/md-calculator" class="active">Calculator</a></li><li><a href="https://toddaustin.github.io/md-product-listing">Product Listing</a></li>    
+            <li><a href="https://toddaustin.github.io/md-multi-page-website">Home</a></li>
+            <li><a href="https://toddaustin.github.io/md-buttons">Buttons</a></li>
+            <li><a href="https://toddaustin.github.io/md-profile-sidebar">Profile Sidebar</a></li>
+            <li><a href="https://toddaustin.github.io/md-forms">Forms & Inputs</a></li>
+            <li><a href="https://toddaustin.github.io/md-calculator" class="active">Calculator</a></li>
+            <li><a href="https://toddaustin.github.io/md-product-listing">Product Listing</a></li>
         </ul>
     </nav>
     <h1>Calculator</h1>
     <section>
+        <div class="calculator-container">
+            <input type="text" readonly value="0">
+            <div class="numbers">
+                <div class="row-1">
+                    <button value="1">1</button>
+                    <button value="2">2</button>
+                    <button value="3">3</button>
+                </div>
+                <div class="row-2">
+                    <button value="4">4</button>
+                    <button value="5">5</button>
+                    <button value="6">6</button>
+                </div>
+                <div class="row-3">
+                    <button value="7">7</button>
+                    <button value="8">8</button>
+                    <button value="9">9</button>
+                </div>
+                <div class="row-4">
+                    <button value="4">4</button>
+                    <button value="5">5</button>
+                    <button value="6">6</button>
+                </div>
+                <div class="row-5">
+                    <button value="0">0</button>
+                    <button value=".">&period;</button>
+                    <button value="clear">C</button>
+                </div>
+            </div>
+            <div class="operator-col">
+                <button value="divide" class="operator">&divide;</button>
+                <button value="multiply" class="operator">&times;</button>
+                <button value="minus" class="operator">&minus;</button>
+                <button value="plus" class="operator">&plus;</button>
+                <button value="equal" class="operator">&equals;</button>
+            </div>
+    </section>
 </body>
+
 </html>
