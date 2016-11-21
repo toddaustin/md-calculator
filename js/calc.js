@@ -34,6 +34,9 @@ var calculate = {
             screen.value = 0;
         } else{
             inputString = inputString.substring(0, inputString.length - 1);
+            if (inputString === ""){
+                inputString = 0;
+            }
             screen.value = inputString;
         }
     },
