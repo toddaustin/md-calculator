@@ -1,52 +1,61 @@
 // calc.js
+var calc, num, operator, screen, inputString;
+calc = document.getElementsByTagName('button');
+screen = document.querySelector('input[name=numScreen]');
+num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+operator = ["*", "/", "+", "-", "%", "."];
 
-var calc = document.getElementsByTagName('button');
-var num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+inputString = "";
 
-var inputString = "";
-var checkValue = {
+var calculate = {
     'number': function(num) {
         inputString = inputString + num;
-        console.log(inputString);
-        return inputString;
-
+        screen.value = inputString;
     },
 
-    'addition' : function(num){
-        return parseInt(num) + parsInt(inputString);
+    'operator': function(operator) {
+        inputString = inputString + operator;
+        screen.value = inputString;
     },
 
-    'clear' : function() {
+    'percent': function(argument) {
+        inputString = parseFloat(inputString / 100);
+        screen.value = inputString;
+    },
+
+    'clear': function() {
         inputString = "";
         screen.value = 0;
     },
 
-    'delete' : function(){
-        inputString = inputString.substring(0, inputString.length -1);
+    'delete': function() {
+        inputString = inputString.substring(0, inputString.length - 1);
         screen.value = inputString;
+    },
+    'equal': function() {
+        screen.value = eval(screen.value);
+        inputString = screen.value;
     }
 }
 
-
-var screen = document.querySelector('input[name=numScreen]');
 for (var i = 0; i < calc.length; i++) {
     calc[i].addEventListener('click', function() {
         var curVal = parseInt(this.value);
-        if (isNaN(curVal)){
+        if (isNaN(curVal)) {
             curVal = this.value;
             if (curVal === 'clear') {
-                checkValue.clear();
-            } else if (curVal = 'delete') {
-                checkValue.delete();
+                calculate.clear();
+            } else if (curVal === 'delete') {
+                calculate.delete();
+            } else if (curVal === 'percent') {
+                calculate.percent();
+            } else if (operator.indexOf(curVal) !== -1) {
+                calculate.operator(curVal);
+            } else if (curVal === "=") {
+                calculate.equal();
             }
         } else if (num.indexOf(curVal) !== -1) {
-      
-            screen.value = checkValue.number(curVal);
-
-        }  
+            calculate.number(curVal);
+        }
     });
 }
-
-
-
-
