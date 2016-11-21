@@ -1,0 +1,171 @@
+html,
+body {
+    background: #000 url('../images/data-calc.jpg') no-repeat center center fixed;
+    color: #fff;
+    font: 16px arial, helvetica, sans serif;
+    margin: 0em;
+    padding: 0;
+}
+
+
+
+h1 {
+    color: #ffc000;
+    margin: 10px 0 10px 20px;
+    padding: 0;
+    font-size: 3em
+}
+
+h3 {
+   color: #fff;
+    margin: 20px 0;
+    padding: 0;
+}
+
+section {
+    margin: 0 25px;
+}
+
+
+/******************************************************************************
+ * nav ********************************************************************
+ ******************************************************************************/
+
+nav ul {
+    background-color: rgba(2, 119, 189,0.5);
+    border-bottom: 1px solid rgba(49,144,201,.25);
+    border-top: 1px solid rgb(1,87,155);
+    cursor: pointer;
+    display: inline-block;
+    font: inherit;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    white-space: nowrap;
+}
+
+nav ul li {
+    /*border-right: 1px solid #01579B;*/
+    display: inline-block;
+    margin: 0;
+    position: relative;
+}
+
+nav a {
+    color: #fff;
+    display: block;
+    padding: 15px 30px;
+    position: relative;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: rgba(1,87,155,.7);
+    box-shadow: inset 0px 2px 8px rgba(0, 0, 0, 0.5);
+    color: rgb(255, 255, 255);
+}
+
+nav a:active {
+    color: #fff;
+    position: relative;
+}
+
+nav a.active {
+    background-color: #fff;
+    color: #01579B
+}
+
+
+/******************************************************************************
+ * Form Components ************************************************************
+ ******************************************************************************/
+
+.calculator-container {
+    background-color: #707f8a;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.3);
+    color: #fff;
+    display: inline-block;
+    margin: 0 20px;
+    padding: 0 0 5px;
+    width: 410px;
+}
+
+input[type=text] {
+    background-color: #263238;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border: 1px solid #999;
+    border-bottom: 1px solid #222;
+    box-shadow: inset 0 1px 3px #000;
+    box-sizing: border-box;
+    color: inherit;
+    display: block;
+    font: 2em arial, sans-serif;
+    letter-spacing: 0.01em;
+    line-height: normal;
+    margin: 0 0 5px;
+    padding: .5em .6em;
+    text-align: right;
+    text-shadow: 2px 1px 10px #111;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.numbers {
+    display: inline-block;
+    padding-left: 5px;
+    width: 300px;
+}
+
+button {
+    background-color: #455A64;
+    background: linear-gradient(to bottom, rgba(69,90,100,1) 0%,rgba(47,61,68,1) 100%);
+    border-radius: 5px;
+    border: none;
+    border-bottom: 1px solid #46494c;
+    border-top: 1px solid #849198;
+    box-shadow: 0 4px 0 #263238;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2em;
+    height: 60px;
+    margin: 5px 3px;
+    outline: none;
+    text-shadow: 0px -1px 1px #222;
+    width: 90px;
+}
+
+.zero {
+    width: 190px;
+}
+
+.operator-col {
+    display: inline-block;
+    font-size: 1.4em;
+    vertical-align: top;
+    width: 100px;
+}
+
+.operator {
+    background-color: #FFB74D;
+    background: linear-gradient(to bottom, rgba(255,183,77,1) 0%,rgba(239,131,0,1) 100%);
+    border-bottom: 1px solid #f39508;
+    border-top: 1px solid #ffe000;
+    box-shadow: 0 4px 0 #C46B00;
+    text-shadow: 0px -1px 1px #8c5310;
+    width: 90px;
+}
+
+button:active {
+    background: linear-gradient(to bottom, rgba(47,61,68,1) 0%,rgba(69,90,100,1) 100%);
+    box-shadow: 0 1px 0 #263238;
+}
+
+button.operator:active{
+    background: linear-gradient(to bottom, rgba(239,131,0,1) 0%,rgba(255,183,77,1) 100%);
+    box-shadow: 0 1px 0 #C46B00;
+}
