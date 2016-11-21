@@ -29,8 +29,13 @@ var calculate = {
     },
 
     'delete': function() {
-        inputString = inputString.substring(0, inputString.length - 1);
-        screen.value = inputString;
+        if (inputString === 0 || inputString === "") {
+            inputString = "";
+            screen.value = 0;
+        } else{
+            inputString = inputString.substring(0, inputString.length - 1);
+            screen.value = inputString;
+        }
     },
     'equal': function() {
         screen.value = eval(screen.value);
