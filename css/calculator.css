@@ -1,20 +1,19 @@
 html,
 body {
-    background: #000 url('../images/data-calc.jpg') no-repeat center center fixed;
     color: #fff;
     font: 16px arial, helvetica, sans serif;
-    margin: 0em;
+    margin: 0;
     padding: 0;
     height: 100%;
 }
 
 
 body {
- 
-    margin: 0;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background: linear-gradient(135deg, #333333 1%, #000000 100%);
+    background: linear-gradient(135deg, #242735 1%, #000000 100%) no-repeat fixed;
+    background-image:-moz-radial-gradient(center bottom, ellipse cover, #242735, #000000);
+    background-image: -webkit-radial-gradient(top left, ellipse cover, #242735, #000000 );
+    background-repeat:no-repeat;
+    background-position: fixed;
 }
 
 h1 {
