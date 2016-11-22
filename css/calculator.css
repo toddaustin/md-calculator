@@ -5,9 +5,17 @@ body {
     font: 16px arial, helvetica, sans serif;
     margin: 0em;
     padding: 0;
+    height: 100%;
 }
 
 
+body {
+ 
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background: linear-gradient(135deg, #333333 1%, #000000 100%);
+}
 
 h1 {
     color: #ffc000;

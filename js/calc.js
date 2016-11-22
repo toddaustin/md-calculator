@@ -3,7 +3,7 @@ var calc, num, operator, screen, inputString;
 calc = document.getElementsByTagName('button');
 screen = document.querySelector('input[name=numScreen]');
 num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-operator = ["*", "/", "+", "-", "%", "."];
+operator = ["*", "/", "+", "-", "."];
 
 inputString = "";
 
@@ -19,7 +19,7 @@ var calculate = {
     },
 
     'percent': function(argument) {
-        inputString = parseFloat(inputString / 100);
+        inputString = parseFloat(inputString / 100) +"*";
         screen.value = inputString;
     },
 
@@ -44,7 +44,7 @@ var calculate = {
         screen.value = eval(screen.value);
         inputString = screen.value;
     }
-}
+};
 
 for (var i = 0; i < calc.length; i++) {
     calc[i].addEventListener('click', function() {
